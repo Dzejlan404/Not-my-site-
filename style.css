@@ -1,0 +1,217 @@
+:root {
+  box-sizing: border-box;
+  font-size: calc(1vw + 0.6em);
+}
+@media (min-width: 35em) {
+  :root {
+    font-size: 1.125em;
+  }
+}
+@media (min-width: 50em) {
+  :root {
+    font-size: 1em;
+  }
+}
+
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-header {
+  padding: 0.4em 1em;
+}
+
+.menu {
+  position: relative;
+  margin: 0 auto;
+}
+
+.menu-toggle {
+  position: absolute;
+  right: 0.3em;
+  top: -1.4em;
+  background-color: transparent;
+  border: 0;
+
+  font-size: 3em;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  text-indent: 5em;
+  white-space: nowrap;
+  line-height: 0.4em;
+}
+
+.menu-toggle::after {
+  position: absolute;
+  top: 0.2em;
+  left: 0.2em;
+  display: block;
+  content: "\2261";
+  text-indent: 0;
+}
+
+.menu-dropdown {
+  position: absolute;
+  display: none;
+  right: 0;
+  left: 0;
+  margin: 0;
+}
+
+.nav-menu {
+  list-style: none;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding-left: 0;
+  border: 1px solid gray;
+}
+
+.nav-menu > li > a {
+  display: block;
+  padding: 1em 1em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+
+  margin: 0 auto;
+}
+
+.nav-menu > li + li {
+  border-top: 1px solid #fff;
+}
+
+.menu.is-open .menu-dropdown {
+  display: block;
+}
+
+.logo {
+  font-size: 1.2em;
+}
+
+.slogan {
+  color: gray;
+  font-size: 0.875em;
+  font-weight: normal;
+  margin-top: -1em;
+}
+
+.banner-img {
+  background-image: url(img/1.jpg);
+  background-position: center;
+  background-size: 100%;
+  padding: 2.5em 0;
+  margin-top: 1.5em;
+}
+
+.banner-text {
+  color: white;
+  text-align: center;
+  padding: 1em 3em;
+}
+.banner-text > p {
+  font-size: 1.1em;
+  color: white;
+}
+
+.contact {
+  padding: 0.7em 1.2em;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  font-size: 1.2em;
+}
+
+.container {
+  min-height: 95.5vh;
+  margin-bottom: 0;
+  padding-bottom: 4em;
+}
+
+.about-me {
+  padding: 1em;
+}
+
+.footer {
+  position: relative;
+  background-color: black;
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 2em;
+  margin-top: -4em;
+}
+
+@media (min-width: 35em) {
+  .row {
+    display: flex;
+    margin-left: left -0.75em;
+    margin-right: left -0.75em;
+    margin-bottom: 1em;
+  }
+
+  .box {
+    flex: 1;
+    margin-right: 0.75em;
+    margin-left: 0.75em;
+    border: 1px solid black;
+    text-align: center;
+  }
+}
+
+@media (min-width: 35em) {
+  .nav-menu {
+    margin-bottom: -1.5em;
+    display: flex;
+    border: 0;
+    padding: 0.1em;
+  }
+  .nav-menu > li {
+    flex: 1;
+  }
+  .nav-menu > li + li {
+    border: 0;
+  }
+  .nav-menu > li > a {
+    padding: 0.1;
+  }
+}
+
+@media (min-width: 35em) {
+  .menu-toggle {
+    display: none;
+  }
+  .menu-dropdown {
+    display: block;
+    position: static;
+  }
+  .menu.menu.is-open {
+    display: block;
+  }
+}
+
+@media (min-width: 60em) {
+  .container {
+    max-width: 1080px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    box-shadow: 1px 11px 29px 0px rgba(0, 0, 0, 0.44);
+    -webkit-box-shadow: 1px 11px 29px 0px rgba(0, 0, 0, 0.44);
+    -moz-box-shadow: 1px 11px 29px 0px rgba(0, 0, 0, 0.44);
+  }
+  .container-aswell {
+    max-width: 1080px;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+}
